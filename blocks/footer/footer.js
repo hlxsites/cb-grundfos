@@ -16,6 +16,11 @@ export default async function decorate(block) {
   footer.innerHTML = html;
   decorateMain(footer);
   await loadBlocks(footer);
+
+  const mailto = footer.querySelector('a[href*="mailto"]');
+  if (mailto) {
+    mailto.classList.remove('button');
+  }
   // await decorateIcons(footer);
   block.append(footer);
 }
