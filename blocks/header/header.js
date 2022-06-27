@@ -61,6 +61,15 @@ export default async function decorate(block) {
     nav.prepend(hamburger);
     nav.setAttribute('aria-expanded', 'false');
     decorateIcons(nav);
+
+    // find current page in the nav
+    const current = window.location.pathname;
+    nav.querySelectorAll('a').forEach((a) => {
+      const u = new URL(a.href, window.location.origin);
+      console.log(u.pathname, current);
+      if (u.pathname === current) a.classList.add('current');
+    });
+
     block.append(nav);
   }
 }

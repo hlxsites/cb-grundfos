@@ -23,6 +23,14 @@ header nav {
 
 header nav a:any-link {
   color: var(--nav-links-color);
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0 1rem;
+  font-size: 1em;
+  line-height: 1.7rem;
+  text-decoration: none;
+  font-weight: 900;
+  font-family: 'thesansv2ot 9bl',sans-serif;
 }
 
 header nav a.current {
@@ -235,6 +243,25 @@ header nav[aria-expanded='true'] .nav-tools li {
     margin: 0;
     cursor: pointer;
     padding-top: 0;
+  }
+
+  header nav .nav-sections > ul > li:nth-of-type(4) {
+    margin-left: auto;
+  }
+
+  header nav .nav-sections > ul > li:last-of-type > a {
+    margin-right: 0;
+    padding: .25rem 2rem;
+    border: 1px solid #fff;
+    border-radius: 8rem;
+    background-color: #e1e1de;
+    color: var(--color-blue-1);
+  }
+
+  header nav .nav-sections > ul > li:last-of-type > a:hover {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
   }
 
   header nav .nav-sections > ul > li > p {
