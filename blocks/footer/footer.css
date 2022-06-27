@@ -1,7 +1,25 @@
 footer {
-  padding: 2rem;
-  background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+  background-color: var(--footer-background-color);
+  color: var(--nav-links-color);
+  font-size: 1em;
+  line-height: 1.7rem;
+  text-decoration: none;
+  font-weight: 900;
+  font-family: 'thesansv2ot 9bl',sans-serif;
+}
+
+footer h2 {
+  font-size: 1.75rem;
+}
+
+footer a:any-link {
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+
 }
 
 footer .footer {
@@ -11,4 +29,8 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+}
+
+footer .icon {
+  margin-right: 12px;
 }

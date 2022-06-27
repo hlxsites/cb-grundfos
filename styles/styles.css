@@ -14,6 +14,7 @@
   --color-blue-1: #11497b;
   --color-lightblue: #009ee3;
   --color-yellow: #adc05d;
+  --color-lightdark: #1d1d1d;
 
   /* fonts */
   --heading-font-family: "thesansv2ot 9bl", sans-serif;
@@ -41,12 +42,15 @@
   --body-font-size-m: 16px;
   --body-font-size-s: 12.8px;
 
-  /* nav height */
+  /* header */
   --nav-height: 6rem;
   --nav-background-color: var(--color-blue-1);
   --nav-links-color: #fff;
   --nav-visited-links-color: var(--color-yellow);
   --nav-hover-links-color: var(--color-lightblue);
+
+  /* footer */
+  --footer-background-color: var(--color-lightdark);
 
 }
 
