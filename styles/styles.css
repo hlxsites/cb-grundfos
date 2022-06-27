@@ -12,6 +12,7 @@
 
  :root {
   --color-blue-1: #11497b;
+  --color-lightblue: #009ee3;
   --color-yellow: #adc05d;
 
   /* fonts */
@@ -45,6 +46,7 @@
   --nav-background-color: var(--color-blue-1);
   --nav-links-color: #fff;
   --nav-visited-links-color: var(--color-yellow);
+  --nav-hover-links-color: var(--color-lightblue);
 
 }
 
