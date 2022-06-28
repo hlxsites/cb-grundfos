@@ -8,15 +8,21 @@
 }
 
 .cards > ul > li {
-    border: 1px solid var(--highlight-background-color);
-    background-color: var(--background-color)
+    border: 1px solid #000;
+    background-color: var(--background-color);
+    color: #000;
+    border-radius: 10px;
+    font-size: var(--body-font-size-l);
 }
 
 .cards .cards-card-body {
     margin: 16px;
+    text-align: left;;
 }
 
-.cards .cards-card-image {
+.cards .cards-card-image,
+.cards .cards-card-multi-image {
+    border-bottom: 1px solid #000;
     line-height: 0;
 }
 
@@ -24,8 +30,51 @@
     margin-top: 0;
 }
 
-.cards > ul > li img {
+.cards > ul > li .cards-card-image picture img,
+.cards > ul > li .cards-card-multi-image picture:not(:first-of-type) img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+}
+
+.cards > ul > li .cards-card-multi-image picture:first-of-type img {
+    margin: 20px 0 10px;
+    max-height: 32px;
+}
+
+.cards p {
+    margin: 0.5em 0;
+}
+
+.cards em {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* tiled */
+.cards.tiled > ul {
+    gap: 0;
+}
+
+.cards.tiled > ul > li,
+.cards.tiled > ul > li .cards-card-image {
+    border: none;
+    position: relative;
+    background-color: #000;
+    height: 100%;
+}
+
+.cards.tiled > ul > li .cards-card-body {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.cards.tiled > ul > li .cards-card-body h1,
+.cards.tiled > ul > li .cards-card-body h2,
+.cards.tiled > ul > li .cards-card-body h3 {
+    color: #fff;
 }

@@ -1,8 +1,4 @@
 /* header and nav layout */
-header {
-  background-color: var(--nav-background-color);
-  width: 100vw;
-}
 
 header nav {
   display: grid;

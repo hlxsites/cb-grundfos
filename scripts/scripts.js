@@ -617,6 +617,36 @@ function buildAutoBlocks(main) {
   }
 }
 
+function decorateSpecialSections(main) {
+  main.querySelectorAll('.section').forEach((section) => {
+    // load background media
+    const bgUrl = section.dataset.background;
+    if (bgUrl) {
+      const bgPath = new URL(bgUrl).pathname;
+      if (bgPath.endsWith('.mp4')) {
+        const video = document.createElement('video');
+        video.className = 'section-bg';
+        video.setAttribute('autoplay', '');
+        video.setAttribute('playsinline', '');
+        video.setAttribute('muted', '');
+        video.setAttribute('loop', '');
+        video.addEventListener('loaded', () => {
+          video.play();
+        });
+        const src = video.appendChild(document.createElement('source'));
+        src.setAttribute('src', bgUrl);
+        section.prepend(video);
+      } else if (bgPath.endsWith('.png')) {
+        const img = document.createElement('img');
+        img.className = 'section-bg';
+        img.src = bgUrl;
+        section.prepend(img);
+      }
+      delete section.dataset.background;
+    }
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -627,6 +657,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSpecialSections(main);
   decorateBlocks(main);
 }
 
