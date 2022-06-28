@@ -630,6 +630,9 @@ function decorateSpecialSections(main) {
         video.setAttribute('playsinline', '');
         video.setAttribute('muted', '');
         video.setAttribute('loop', '');
+        video.addEventListener('canplay', () => {
+          video.play();
+        });
         video.addEventListener('loaded', () => {
           video.play();
         });
