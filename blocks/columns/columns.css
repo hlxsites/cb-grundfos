@@ -25,9 +25,8 @@
 }
 
 main .section.inverted .columns-wrapper {
-    height: 100vh;
     text-align: left;
     display: flex;
     align-items: center;
-    margin-top: var(--nav-height);
+    margin-top: 300px;
 }
